@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <MainPane/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MainPane from '@/components/MainPane'
+
 
 export default {
   name: 'App',
   components: {
-    MainPane
   }
 }
 </script>
@@ -22,6 +21,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

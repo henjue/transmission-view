@@ -4,22 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-// const defaultHeaders = {
-//   'Authorization': 'Basic YWRtaW46TUZQOU9hazZEbzhFaXR2Mw==',
-//   'X-Transmission-Session-Id':
-//   'CRaiIIVfVgug8vYnWkk75wyvPM1ndt6UuYzYcKfGXZ1QxyhI'
-// }
-// axios.defaults.baseURL = window.location.origin
-// axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
-// axios.defaults.headers.common['Access-Control-Request-Method'] = '*'
+import VueRouter from 'vue-router'
+import router from './configs/router'
+import Ajax from './configs/ajax'
 Vue.config.productionTip = false
-Vue.use(VueAxios, axios)
+Vue.use(Ajax, {})
+Vue.use(VueRouter)
 Vue.use(iView)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  router,
   components: { App },
   template: '<App/>'
 })
