@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <MainPane/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import MainPane from '@/components/MainPane'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainPane
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

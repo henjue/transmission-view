@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/rpc': {
+        target: 'http://nas.j99.io:9091',
+        changeOrigin: true,
+        pathRewrite:{
+          '^/rpc':'/transmission/rpc',
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
